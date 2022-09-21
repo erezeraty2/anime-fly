@@ -1,0 +1,126 @@
+/*font-family: 'Amiri Quran', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;*/
+:root {
+    --black:black;
+    --blue:rgba(0, 17, 173, 0.87);
+    --red:#cff0c7;
+    --yellow: rgb(255, 208, 0);
+    --grey:rgb(201, 201, 201);
+    --black-2:rgb(19, 17, 17);
+    --width:500;
+    --sh: -7px 6px 86px 9px rgba(0,102,255,0.74);
+    --webkit-box-shadow: -7px 6px 86px 9px rgba(0,102,255,0.74);
+    --moz-box-shadow: -7px 6px 86px 9px rgba(0,102,255,0.74);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    
+}
+body{
+    background-color: var(--black-2);
+}
+.heading {
+    color : #444 ;
+    font-size : 40px ;
+    text-align : center ;
+    padding : 10px ; 
+}
+
+ .container {
+
+    display : grid ;
+    grid-template-columns : 2fr 1fr ;
+    gap : 15px ;
+    align-items : flex-start ;
+    padding : 5px 5% ;
+}
+
+.container .main-video {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.container .main-video video {
+    transition: 1s ease;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 7px 23px -3px rgba(0,0,0,0.75);
+--webkit-box-shadow: 1px 7px 23px -3px rgba(0,0,0,0.75);
+---box-shadow: 1px 7px 23px -3px rgba(0,0,0,0.75);
+
+}
+
+.container .main-video .title{
+    color: black;
+    font-size: 23px;
+    padding-top: 15px ;
+    padding-bottom: 15px;
+
+}
+.container .video-list       {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    height: 520px;
+    overflow-y: scroll;
+}
+.container .video-list::-webkit-scrollbar{
+    width: 7px;
+}
+.container .video-list::-webkit-scrollbar-track{
+    background-color: var(--black);
+    border-radius: 50px;
+}
+.video-list::-webkit-scrollbar-thumb{
+    background: #444;
+    border-radius: 50px;
+}
+
+
+.container .video-list .vid video {
+    width: 100px;
+    border-radius: 5px;
+}
+.container .video-list .vid{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: rgb(235, 232, 232);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    border: 0.5px solid rgb(136, 135, 135);
+    cursor: pointer;
+}
+.container .video-list .vid:hover{background-color: rgb(201, 196, 196);}
+
+
+.container .video-list .active {background-color: rgb(201, 196, 196);}
+
+
+@media (max-width:991px){
+    .container{
+        grid-template-columns: 1.5fr 1fr;
+        padding: 10px;
+
+    }
+}
+
+
+@media (max-width:768px){
+    .container{
+        grid-template-columns:  1fr;
+        padding: 10px;
+
+    }
+}
+
+
